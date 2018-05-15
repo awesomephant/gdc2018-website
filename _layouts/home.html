@@ -1,0 +1,18 @@
+---
+layout: base
+---
+
+<header class="hero">
+    <h1>GD Camberwell 2018</h1>
+    <video class='hero-video' src=""></video>
+</header>
+
+<ul class="people">
+{% for person in site.data.people %}
+    <li class="person">
+        <h2 class="person-name">
+            <a href="{{person.url}}">{{person.name}}</a>
+        </h2>
+    </li>    
+{% endfor %}
+</ul>
