@@ -11,3 +11,5 @@ To work on the site, you need to
 6. After you've made changes, `git commit` and `git push` to add them to the repo
 
 If you've found an issue with the site, please do [open an issue](https://github.com/awesomephant/gdc2018-website/issues) on here.
+
+Edit [this spreadsheet](https://docs.google.com/spreadsheets/d/1GBtwPRINskwA2Z1xna2HFu7Va75kbirYydWrfQxWR_o/edit#gid=0) to add people's names and websites.
