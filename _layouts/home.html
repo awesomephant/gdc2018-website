@@ -41,8 +41,15 @@ layout: base
     <div class="home-image">
         <img src="/assets/home-1.jpg" alt="" class="home-image">
     </div>
-    <div class="home-image">
-        <img src="/assets/james-sea.jpg" alt="" class="home-image">
+    <div class="home-type home-people">
+    <nav class="people-list">
+
+    <h2 class='people-list-header'>Graduates</h2>
+    {% for person in site.data.names %}
+    <a class="person" href="{{person.url}}">{{person.first_name}} {{person.last_name}}</a>
+    {% endfor %}
+    </ul>
+</nav>
     </div>
     <div class="home-image">
         <img src="/assets/paper.jpg" alt="" class="home-image">
@@ -52,12 +59,3 @@ layout: base
     </div>
 
 </div>
-
-<nav class="people-list">
-
-    <h2 class='people-list-header'>2018 Graduates</h2>
-    {% for person in site.data.names %}
-    <a class="person" href="{{person.url}}">{{person.first_name}} {{person.last_name}}</a>
-    {% endfor %}
-    </ul>
-</nav>

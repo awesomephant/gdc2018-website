@@ -87,6 +87,7 @@
     top: 0;
     right: 0;
     border: none;
+    display: none;
     background: none;
     transform: rotate(0deg);
     transform-origin: 50% 50%;
@@ -111,10 +112,15 @@ button:hover{
     cursor: pointer;
 }
 
+.home-people {
+    grid-column-end: span 2;
+    grid-row-end: span 4;
+}
+
 .people-list{
-    position: absolute;
+//    position: absolute;
     background: $black;
-    width: 33.333%;
+    columns: 2;
     right: 0;
     top: 0;
     list-style: none;
@@ -140,11 +146,12 @@ button:hover{
     font-size: 1;
     font-size: 1.5rem;
     color: white;
+    column-span: all;
     text-transform: uppercase;
 }
 
 .person {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     text-decoration: none;
     font-weight: 100;
     color: $black;
