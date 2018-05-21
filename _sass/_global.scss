@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 100%;
     font-weight: normal;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $america;
 }
