@@ -1,6 +1,21 @@
 .container{
-    display: grid;
+    display: inline-grid;
+    grid-template-columns: 33% 33% 33%;
 }
 
-.people {
+.item-livestream{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end:;
+}
+
+.people-list{
+    position: absolute;
+    background: $gray;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    list-style: none;
+    padding: 1rem;
 }
