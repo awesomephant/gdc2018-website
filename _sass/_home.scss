@@ -1,7 +1,11 @@
 .home-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 33.33333vh);
+    grid-template-rows: repeat(6, min-content);
+    grid-template-columns: repeat(2, 1fr);
+    @include bp(m){
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 30vh);
+    }
     img, video {
         max-width: 150%;
     //    max-height: 100vh;
@@ -11,14 +15,22 @@
 
 .home-livestream {
     overflow: hidden;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    background: red;
+    min-height: 30vh;
+    @include bp(m){
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
     position: relative;
     z-index: -100;
-    video {
-        width: 140%;
+    iframe {
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
     }
 }
 
@@ -46,21 +58,29 @@
 }
 
 .home-image {
-    // grid-column-start: 1;
-    // grid-column-end: 1;
     // grid-row-start: 1;
-    // grid-row-end: 4;
+    grid-row-end: span 1;
     overflow: hidden;
     background-color: #f4eb42;
+    max-height: 20vh;
+    @include bp(m){
+        grid-column-start: auto;
+        max-height: none;
+    }
   img {
-      height: auto;
-      width: 100%;
+      display: block;
+      object-fit: cover;
   }
 }
 .home-type {
     padding: .5rem;
     background: $black;
     color: white;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    @include bp(m){
+        grid-column-end: span 1;
+    }
     span {
         display: block;
     }
@@ -68,15 +88,6 @@
         font-size: 1.4rem;
         margin-bottom: 1rem;
     }
-}
-
-.title {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 4.5rem;
-    text-align: center;
 }
 
 .togglePeople{
@@ -120,13 +131,14 @@ button:hover{
 .people-list{
 //    position: absolute;
     background: $black;
-    columns: 2;
+    columns: 1;
+    @include bp(m){
+        columns: 2;
+    }
     right: 0;
     top: 0;
     list-style: none;
-    padding-left: 2.5rem;
-    padding-top: 5rem;
-    padding-bottom: 1.5rem;
+    padding: 1rem;
     height: 100vh;
     overflow-y: scroll;
     transition: 500ms;
@@ -144,14 +156,17 @@ button:hover{
 .people-list-header {
     margin-bottom: 2rem;
     font-size: 1;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: white;
     column-span: all;
     text-transform: uppercase;
 }
 
 .person {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
+    @include bp(m){
+        font-size: 2.2rem;
+    }
     text-decoration: none;
     font-weight: 100;
     color: $black;

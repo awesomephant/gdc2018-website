@@ -35,3 +35,15 @@ $black: rgb(10,10,10);
 $america: 'GT America Light', serif;
 
 $transition-duration: 500ms;
+
+@mixin bp($point) {
+    @if $point == l {
+      @media (min-width: 65rem) { @content; }
+    }
+    @else if $point == m {
+      @media (min-width: 45rem) { @content; }
+    }
+    @else if $point == s {
+      @media (min-width: 35rem)  { @content; }
+    }
+  }
