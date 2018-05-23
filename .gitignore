@@ -1,3 +1,6 @@
 _site
 .sass-cache
 .jekyll-metadata
+credentials.json
+package-lock.json
+node_modules/

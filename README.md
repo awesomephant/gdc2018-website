@@ -6,7 +6,7 @@ To work on the site, you need to
 1. [Install Jekyll](https://jekyllrb.com/docs/installation/) on your machine
 2. [Install git](https://git-scm.com/)
 3. Clone this repo by running `git clone https://github.com/awesomephant/gdc2018-website.git`
-4. Navigate to the folder in your command line and run `jekyll serve` to build the site and start a local development server
+4. Navigate to the folder in your command line and run `jekyll serve` to build the site and start a local development server. If you get an error message, try `bundle install` followed by `bundle exec jekyll serve`
 5. Go to [127.0.01](http://120.0.0.1) in your browser
 6. After you've made changes, `git commit` and `git push` to add them to the repo
 
@@ -22,3 +22,22 @@ The images on the website are randomly chosen from a list of images on page load
 
 1. Place the image file in `./assets/images`.
 2. Add the filename to the bottom of `./data/images.csv`. The `id` field allows us to credit the person who made the image. Look into `names.csv` to find the right ID.
+
+## Deployment
+
+To deploy the website for the first time, follow these instructions:
+
+1. In the root directory, create a file named `credentials.json` with the following contents:
+```
+{
+    "production": {
+        "username": "[FTP Username goes here]",
+        "password": "[FTP Password goes here]"
+    }
+}
+```
+
+2. Run `npm i`
+3. `grunt deploy`
+
+On subsequent deployments, running `grunt deploy` will be enough.

@@ -1,0 +1,12 @@
+{
+    "name": "gdc2018-website",
+    "description": "GDC Show Website 2018",
+    "authors": "Max Kohler, Ben Browning",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {
+        "grunt": "*",
+        "grunt-ftp-deploy": "*",
+        "grunt-exec": "*"
+    }
+}
