@@ -1,26 +1,7 @@
 @font-face {
-    font-family: "GT America Regular";
-    src: url("../assets/GT-America-Trial-Regular.otf") format("opentype"),
-}
-@font-face {
-    font-family: "GT America Italic";
-    src: url("/assets/GT-America-Trial-Regular-Italic.otf") format("opentype"),
-}
-@font-face {
-    font-family: "GT America Bold";
-    src: url("/assets/GT-America-Trial-Bold.otf") format("opentype"),
-}
-@font-face {
-    font-family: "GT America Bold Italic";
-    src: url("/assets/GT-America-Trial-Bold-Italic.otf") format("opentype"),
-}
-@font-face {
     font-family: "GT America Light";
-    src: url("../assets/GT-America-Trial-Light.otf") format("opentype"),
-}
-@font-face {
-    font-family: "GT America Light Italic";
-    src: url("/assets/GT-America-Trial-Light-Italic.otf.otf") format("opentype"),
+    src: url("../assets/GT-America-Standard-Light.ttf") format("truetype"),
+         url("../assets/GT-America-Standard-Light.woff") format("woff"),
 }
 
 @keyframes pulsate {

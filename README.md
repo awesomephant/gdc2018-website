@@ -41,3 +41,8 @@ To deploy the website for the first time, follow these instructions:
 3. `grunt deploy`
 
 On subsequent deployments, running `grunt deploy` will be enough.
+
+## Typefaces
+
+We're using [GT America](https://www.grillitype.com/typeface/gt-america) for the website, but we can't keep the font files in this repo [because of this](https://pixelambacht.nl/2017/github-font-piracy/). 
+Once you've obtained the files (via email etc.), place them into `/assets/` to enable them on the website.
