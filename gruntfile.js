@@ -16,12 +16,43 @@ module.exports = function (grunt) {
                 src: '_site/',
                 dest: '/',
             }
+        },
+        responsive_images: {
+            myTask: {
+                options: {
+                    rename: false,
+                    sizes: [
+                    {
+                        name: 'large',
+                        width: 800
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['assets/images/*.{jpg,gif,png}'],
+                    cwd: './',
+                    dest: '_tmp/'
+                }]
+            }
+        },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: '_tmp/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: '_site/'
+                }]
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-ftp-deploy');
+    grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-exec');
     //    grunt.registerTask('deploy', ['run', 'ftp-deploy']);
-    grunt.registerTask('deploy', ['exec', 'ftp-deploy']);
+    grunt.registerTask('minify', ['responsive_images', 'imagemin']);
+    grunt.registerTask('deploy', ['exec', 'minify', 'ftp-deploy']);
 
 };
