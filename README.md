@@ -12,4 +12,13 @@ To work on the site, you need to
 
 If you've found an issue with the site, please do [open an issue](https://github.com/awesomephant/gdc2018-website/issues) on here.
 
-Edit [this spreadsheet](https://docs.google.com/spreadsheets/d/1GBtwPRINskwA2Z1xna2HFu7Va75kbirYydWrfQxWR_o/edit#gid=0) to add people's names and websites.
+## Adding people's names, websites etc.
+
+Edit [this spreadsheet](https://docs.google.com/spreadsheets/d/1GBtwPRINskwA2Z1xna2HFu7Va75kbirYydWrfQxWR_o/edit#gid=0) to edit people's names and websites. **Do not** edit `names.csv` directly. 
+
+## Adding images
+
+The images on the website are randomly chosen from a list of images on page load. To add an image to the rotation:
+
+1. Place the image file in `./assets/images`.
+2. Add the filename to the bottom of `./data/images.csv`. The `id` field allows us to credit the person who made the image. Look into `names.csv` to find the right ID.

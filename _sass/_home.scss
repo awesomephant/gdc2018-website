@@ -61,8 +61,9 @@
     // grid-row-start: 1;
     grid-row-end: span 1;
     overflow: hidden;
+    background-size: cover;
     background-color: #f4eb42;
-    max-height: 20vh;
+    position: relative;
     @include bp(m){
         grid-column-start: auto;
         max-height: none;
@@ -72,6 +73,23 @@
       object-fit: cover;
   }
 }
+
+.credit {
+    opacity: 0;
+    bottom: .5rem;
+    left: .5rem;
+    color: white;
+    text-decoration: none;
+    font-size: .9rem;
+    transition: $transition-duration;
+    position: absolute;
+    transform: translateY(10px);
+    .home-image:hover & {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .home-type {
     padding: .5rem;
     background: $black;

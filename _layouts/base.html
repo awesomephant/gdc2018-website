@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GD Camberwell 2018</title>
     <link rel="stylesheet" href="/css/main.css">
+    <script>
+        console.log('hi')
+        const people = [
+            {% for person in site.data.names %}
+                {
+                    first_name: "{{person.first_name}}",
+                    last_name: "{{person.last_name}}",
+                    url: "{{person.website}}",
+                    id: {{person.id}}
+                },
+
+            {% endfor %}
+        ]
+        const images = [
+            {% for image in site.data.images %}
+                {
+                    filename: "{{image.filename}}",
+                    person: "{{image.person}}"
+                },
+            {% endfor %}
+        ]
+    </script>
 </head>
 <body>
     {{ content }}
