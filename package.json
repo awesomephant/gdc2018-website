@@ -7,6 +7,8 @@
     "dependencies": {
         "grunt": "*",
         "grunt-ftp-deploy": "*",
-        "grunt-exec": "*"
+        "grunt-contrib-imagemin": "*",
+        "grunt-exec": "*",
+        "grunt-responsive-images": "*"
     }
 }

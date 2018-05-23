@@ -4,3 +4,6 @@ _site
 credentials.json
 package-lock.json
 node_modules/
+_tmp/
+*.ttf
+*.woff
