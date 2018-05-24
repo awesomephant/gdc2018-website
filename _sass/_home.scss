@@ -62,7 +62,7 @@
     grid-row-end: span 1;
     overflow: hidden;
     background-size: cover;
-    background-color: #f4eb42;
+    background-color: $black;
     position: relative;
     @include bp(m){
         grid-column-start: auto;
