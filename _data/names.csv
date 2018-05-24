@@ -1,5 +1,5 @@
 id,first_name,last_name,Website
-0,Joshua,Attwood,
+0,Joshua,Attwood,http://www.joshattwood.com/
 1,Jane,Barges,
 2,Gabriella,Barkham,
 3,Amrita,Bisla,
@@ -17,7 +17,7 @@ id,first_name,last_name,Website
 15,Priyah,De Chiara,
 16,Toby,Poo,
 17,Harry,Dickinson,
-18,William,Eels,
+18,William,Eels,https://www.willeels.com/
 19,Dominic,Fagan,
 20,Micol,Galli,
 21,Jakob,Hardman,
