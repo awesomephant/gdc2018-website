@@ -36,6 +36,7 @@ const shuffleImages = function(){
         let image = images[i];
         if(image){
             let creditElement = container.querySelector('.credit')
+            creditElement.classList.add('color-' + image.color)
             container.style.backgroundImage = 'url(/assets/images/' + image.filename + ')';
             let person = getPersonByID(image.person)
             creditElement.innerHTML = person.first_name + ' ' + person.last_name;

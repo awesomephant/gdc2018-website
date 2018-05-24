@@ -81,13 +81,18 @@
     color: white;
     text-decoration: none;
     font-size: .9rem;
-    mix-blend-mode: difference;
     transition: $transition-duration;
     position: absolute;
     transform: translateY(10px);
     .home-image:hover & {
         transform: translateY(0);
         opacity: 1;
+    }
+    &.color-black {
+        color: $black;
+    }
+    &.color-white {
+        color: white;
     }
 }
 
