@@ -20,6 +20,8 @@ module.exports = function (grunt) {
         responsive_images: {
             myTask: {
                 options: {
+                    newFilesOnly: false,
+                    quality: 95,
                     rename: false,
                     sizes: [
                     {
@@ -36,6 +38,9 @@ module.exports = function (grunt) {
             }
         },
         imagemin: {
+            options: {
+                optimizationLevel: 5
+            },
             dynamic: {
                 files: [{
                     expand: true,
