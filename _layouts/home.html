@@ -22,37 +22,28 @@ layout: base
         </h2>
     </div>
     <div class="home-livestream">
-        <!-- <iframe src="http://player.twitch.tv/?channel=monstercat&muted=true" height="100%" width="100%" frameborder="0" scrolling="no"
+        <iframe src="http://player.twitch.tv/?channel=monstercat&muted=true" height="100%" width="100%" frameborder="0" scrolling="no"
             allowfullscreen="false" style="pointer-events: none;">
-        </iframe> -->
+        </iframe>
+        <span class="live-indicator">Live</span>
     </div>
-    <div class="home-image">
-        <a href="" class="credit"></a>
-    </div>
-    <div class="home-image">
-        <a href="" class="credit"></a>
-    </div>
-    <div class="home-image">
-        <a href="" class="credit"></a>
-    </div>
-    <div class="home-image">
-        <a href="" class="credit"></a>
-    </div>
+
+    {% include home-image.html rows=2 %}
+    {% include home-image.html %}
+    {% include home-image.html %}
+    {% include home-image.html %}
     <div class="home-type home-people">
         <nav class="people-list">
 
             <h2 class='people-list-header'>Graduates</h2>
             {% for person in site.data.names %}
-            <a class="person" href="{{person.url}}">{{person.first_name}} {{person.last_name}}</a>
+            <a class="person" href="{{person.Website}}" target="_blank">{{person.first_name}} {{person.last_name}}</a>
             {% endfor %}
             </ul>
         </nav>
     </div>
-    <div class="home-image">
-        <a href="" class="credit"></a>
-    </div>
-    <div class="home-image">
-        <a href="" class="credit"></a>
-    </div>
 
+    {% include home-image.html %}
+    {% include home-image.html %}
+    {% include home-image.html rows='2' %}
 </div>

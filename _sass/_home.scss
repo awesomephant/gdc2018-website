@@ -1,10 +1,10 @@
 .home-grid {
     display: grid;
-    grid-template-rows: repeat(6, min-content);
+    grid-template-rows: repeat(auto-fill, min-content);
     grid-template-columns: repeat(2, 1fr);
     @include bp(m){
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(6, 30vh);
+        grid-template-rows: repeat(8, 15rem);
     }
     img, video {
         max-width: 150%;
@@ -58,8 +58,10 @@
 }
 
 .home-image {
-    // grid-row-start: 1;
     grid-row-end: span 1;
+    &.rows-2 {
+        grid-row-end: span 2;
+    }
     overflow: hidden;
     background-size: cover;
     background-color: $black;
@@ -98,8 +100,8 @@
 
 .home-type {
     padding: .5rem;
-    background: $black;
-    color: white;
+    background: $gray;
+    color: black;
     grid-column-start: 1;
     grid-column-end: span 3;
     @include bp(m){
@@ -149,12 +151,12 @@ button:hover{
 
 .home-people {
     grid-column-end: span 2;
-    grid-row-end: span 4;
+    grid-row-end: span 6;
 }
 
 .people-list{
 //    position: absolute;
-    background: $black;
+    background: $gray;
     columns: 1;
     @include bp(m){
         columns: 2;
@@ -163,7 +165,6 @@ button:hover{
     top: 0;
     list-style: none;
     padding: 1rem;
-    height: 100vh;
     overflow-y: scroll;
     transition: 500ms;
     
@@ -181,20 +182,17 @@ button:hover{
     margin-bottom: 2rem;
     font-size: 1;
     font-size: 1.4rem;
-    color: white;
+    color: black;
     column-span: all;
     text-transform: uppercase;
 }
 
 .person {
-    font-size: 1.4rem;
-    @include bp(m){
-        font-size: 2.2rem;
-    }
+    font-size: calc(1rem + .5vw);
     text-decoration: none;
     font-weight: 100;
-    color: $black;
-    color: white;
+    color: $gray;
+    color: black;
     display: block;
     &:hover, &:focus {
         opacity: .5;
