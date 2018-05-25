@@ -1,10 +1,10 @@
 .home-grid {
     display: grid;
-    grid-template-rows: repeat(auto-fill, min-content);
+    grid-template-rows: repeat(5, calc(15rem + 5vh));
     grid-template-columns: repeat(2, 1fr);
     @include bp(m){
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(8, 15rem);
+        grid-template-rows: repeat(8, calc(15rem + 5vh));
     }
     img, video {
         max-width: 150%;
@@ -66,9 +66,9 @@
     background-size: cover;
     background-color: $black;
     position: relative;
+    max-height: none;
+    grid-column-start: auto;
     @include bp(m){
-        grid-column-start: auto;
-        max-height: none;
     }
   img {
       display: block;
@@ -157,10 +157,7 @@ button:hover{
 .people-list{
 //    position: absolute;
     background: $gray;
-    columns: 1;
-    @include bp(m){
-        columns: 2;
-    }
+    columns: 2;
     right: 0;
     top: 0;
     list-style: none;
