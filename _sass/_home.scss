@@ -151,28 +151,15 @@ button:hover{
 
 .home-people {
     grid-column-end: span 2;
-    grid-row-end: span 6;
+    grid-row-end: span 4;
 }
 
 .people-list{
-//    position: absolute;
     background: $gray;
     columns: 2;
-    right: 0;
-    top: 0;
     list-style: none;
     padding: 1rem;
-    overflow-y: scroll;
     transition: 500ms;
-    
-    &::-webkit-scrollbar{
-        display:none;
-    }
-
-    &.active {
-        transform: translateX(100%);
-        transition-duration: $transition-duration;
-    }
 }
 
 .people-list-header {
@@ -185,7 +172,7 @@ button:hover{
 }
 
 .person {
-    font-size: calc(1rem + .5vw);
+    font-size: calc(1rem + .7vw);
     text-decoration: none;
     font-weight: 100;
     color: $gray;
