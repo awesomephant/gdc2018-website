@@ -13,7 +13,7 @@ id,first_name,last_name,Website
 11,Joshua,Conway,
 12,Ruby,Cooper,
 13,Ellena,Cousins,
-14,Tom,Darlington,
+14,Tom,Darlington,http://tomdarlingtondesign.com/
 15,Priyah,De Chiara,
 16,Toby,Dexter,
 17,Harry,Dickinson,
@@ -36,7 +36,7 @@ id,first_name,last_name,Website
 34,Joshua,Parry,
 35,Jordan,Polk,
 36,Michael,Raymond,
-37,Ivan,Rerat,
+37,Ivan,Rerat,https://www.ivanrerat.com/
 38,Ibrahim,Romman,
 39,Shawn,Sawyers,http://www.shawnsawyers.com/
 40,Marco,Service,
