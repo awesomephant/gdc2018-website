@@ -27,6 +27,19 @@
         grid-row-start: 1;
         grid-row-end: 4;
     }
+}
+
+.stream-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    &.offline {
+        background: $blue;
+        iframe {
+            display: none;
+        }
+    }
     iframe {
         position: absolute;
         display: block;
@@ -41,13 +54,6 @@
             min-width: 1300px;
         }
     }
-}
-
-.stream-container {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
 }
 
 .live-indicator {
@@ -70,6 +76,9 @@
         top: -3px;
         margin-right: .5rem;
         animation: pulsate 1s infinite alternate both;
+    }
+    .offline + & {
+        display: none;
     }
 }
 
