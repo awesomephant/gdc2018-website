@@ -77,7 +77,7 @@
         margin-right: .5rem;
         animation: pulsate 1s infinite alternate both;
     }
-    .offline + & {
+    .offline + &:before {
         display: none;
     }
 }

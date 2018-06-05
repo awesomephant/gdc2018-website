@@ -55,6 +55,7 @@ var httpRequest;
 
 const handleTwitch = function (){
     let streamEl = document.querySelector('.stream-container');
+    let indicatorEl = document.querySelector('.live-indicator');
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
             console.log('Stream is online')
@@ -62,6 +63,7 @@ const handleTwitch = function (){
         } else {
             console.log('Stream is offline')
             streamEl.classList.add('offline')
+            indicatorEl.innerHTML = 'Offline'
         }
     }
 }
