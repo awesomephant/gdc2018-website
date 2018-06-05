@@ -65,7 +65,12 @@
 .home-image {
     grid-row-end: span 1;
     &.rows-2 {
-        grid-row-end: span 2;
+        grid-column-end: span 2;
+        grid-row-end: span 1;
+        @include bp(m){
+            grid-column-end: span 1;
+            grid-row-end: span 2;
+        }
     }
     overflow: hidden;
     background-size: cover;
