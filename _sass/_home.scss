@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2, 50%);
     @include bp(m){
         grid-template-columns: repeat(3, 33.33333vw);
-        grid-template-rows: repeat(8, calc(12rem + 5vh));
+        grid-template-rows: repeat(8, calc(13rem + 5vh));
     }
     img, video {
         max-width: 150%;
@@ -14,7 +14,7 @@
 }
 
 .home-livestream {
-    //overflow: hidden;
+    overflow: hidden;
     background: $gray;
     grid-column-start: 1;
     grid-column-end: span 2;
@@ -31,10 +31,23 @@
         position: absolute;
         display: block;
         height: 100%;
+        width: 100%;
         top: 0;
-        bottom: 0;
-        left: -20%;
+        left: 0;
+        object-fit: cover;
+        min-width: 500px;
+        @include bp(m){
+            min-width: 1300px;
+        }
     }
+}
+
+.stream-container {
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
 }
 
 .live-indicator {
@@ -61,7 +74,6 @@
 }
 
 .home-image {
-    grid-row-end: span 1;
     &.rows-2 {
         grid-column-end: span 2;
         grid-row-end: span 1;
@@ -120,7 +132,7 @@
         display: block;
     }
     h2 {
-        font-size: 1.4rem;
+        font-size: calc(.9rem + .5vw);
         margin-bottom: 1rem;
     }
 }
@@ -181,7 +193,7 @@ button:hover{
 }
 
 .person {
-    font-size: calc(1rem + .7vw);
+    font-size: calc(.9rem + .7vw);
     text-decoration: none;
     font-weight: 100;
     color: $gray;
