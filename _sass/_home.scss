@@ -17,7 +17,7 @@
     overflow: hidden;
     grid-column-start: 1;
     grid-column-end: span 3;
-    background: red;
+    background: $gray;
     min-height: 30vh;
     @include bp(m){
         grid-column-start: 2;
