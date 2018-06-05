@@ -45,4 +45,8 @@ const shuffleImages = function(){
     }
 }
 
+const checkIfStreamIsOnline = function(){
+    
+}
+
 shuffleImages();

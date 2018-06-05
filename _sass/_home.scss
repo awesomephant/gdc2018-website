@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2, 50%);
     @include bp(m){
         grid-template-columns: repeat(3, 33.33333vw);
-        grid-template-rows: repeat(8, calc(15rem + 5vh));
+        grid-template-rows: repeat(8, calc(12rem + 5vh));
     }
     img, video {
         max-width: 150%;
@@ -28,14 +28,12 @@
         grid-row-end: 4;
     }
     iframe {
-        height: 100%;
         position: absolute;
-        right: 0;
-        left: 0;
+        display: block;
+        height: 100%;
         top: 0;
         bottom: 0;
-        width: 100%;
-        display: block;
+        left: -20%;
     }
 }
 
