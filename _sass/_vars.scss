@@ -22,7 +22,7 @@ $transition-duration: 500ms;
       @media (min-width: 65rem) { @content; }
     }
     @else if $point == m {
-      @media (min-width: 45rem) { @content; }
+      @media (min-width: 50rem) { @content; }
     }
     @else if $point == s {
       @media (min-width: 35rem)  { @content; }
