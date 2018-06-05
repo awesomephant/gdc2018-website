@@ -132,7 +132,7 @@
         display: block;
     }
     h2 {
-        font-size: calc(.9rem + .5vw);
+        font-size: calc(1rem + .5vw);
         margin-bottom: 1rem;
     }
 }
@@ -173,6 +173,8 @@ button:hover{
 .home-people {
     grid-column-end: span 2;
     grid-row-end: span 4;
+    position: relative;
+    z-index: 100;
 }
 
 .people-list{
