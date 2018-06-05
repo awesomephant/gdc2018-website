@@ -133,6 +133,11 @@
     }
 }
 
+.title {
+    //Below: Bad typography
+    text-transform: uppercase;
+}
+
 .home-type {
     padding: .5rem;
     background: $gray;
