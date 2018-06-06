@@ -1,10 +1,10 @@
 .home-grid {
     display: grid;
-    grid-template-rows: repeat(7, calc(15rem + 5vh));
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, minmax(20vh, auto));
+    grid-template-columns: repeat(2, 50%);
     @include bp(m){
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(8, calc(15rem + 5vh));
+        grid-template-columns: repeat(3, 33.33333vw);
+        grid-template-rows: repeat(8, calc(13rem + 5vh + 3vw));
     }
     img, video {
         max-width: 150%;
@@ -15,22 +15,49 @@
 
 .home-livestream {
     overflow: hidden;
-    grid-column-start: 1;
-    grid-column-end: span 3;
     background: $gray;
+    grid-column-start: 1;
+    grid-column-end: span 2;
     min-height: 30vh;
+    position: relative;
+    z-index: -100;
     @include bp(m){
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 4;
     }
+}
+
+.stream-container {
+    height: 100%;
     position: relative;
-    z-index: -100;
-    iframe {
-        height: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+    &.offline {
         position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $blue;
+        iframe {
+            display: none;
+        }
+    }
+    iframe {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: scale(1.1);
         object-fit: cover;
+        min-width: 500px;
+        @include bp(m){
+            min-width: 1300px;
+        }
     }
 }
 
@@ -55,18 +82,25 @@
         margin-right: .5rem;
         animation: pulsate 1s infinite alternate both;
     }
+    .offline + &:before {
+        display: none;
+    }
 }
 
 .home-image {
-    grid-row-end: span 1;
     &.rows-2 {
-        grid-row-end: span 2;
+        grid-column-end: span 2;
+        grid-row-end: span 1;
+        @include bp(m){
+            grid-column-end: span 1;
+            grid-row-end: span 2;
+        }
     }
     overflow: hidden;
     background-size: cover;
     background-color: $black;
     position: relative;
-    min-height: calc(15rem + 5vh);
+    min-height: calc(13rem + 5vh);
     max-height: none;
     grid-column-start: auto;
     @include bp(m){
@@ -99,6 +133,11 @@
     }
 }
 
+.title {
+    //Below: Bad typography
+    text-transform: uppercase;
+}
+
 .home-type {
     padding: .5rem;
     background: $gray;
@@ -112,7 +151,7 @@
         display: block;
     }
     h2 {
-        font-size: 1.4rem;
+        font-size: calc(1rem + .5vw);
         margin-bottom: 1rem;
     }
 }
@@ -152,7 +191,13 @@ button:hover{
 
 .home-people {
     grid-column-end: span 2;
-    grid-row-end: span 4;
+    grid-row-end: span 3;
+    overflow: hidden;
+    @include bp(m){
+        grid-row-end: span 4;
+    }
+    position: relative;
+    z-index: 100;
 }
 
 .people-list{
@@ -173,7 +218,7 @@ button:hover{
 }
 
 .person {
-    font-size: calc(1rem + .7vw);
+    font-size: calc(1rem + .8vw);
     text-decoration: none;
     font-weight: 100;
     color: $gray;

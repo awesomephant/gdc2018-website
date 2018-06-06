@@ -9,23 +9,26 @@ layout: base
     </svg>
 </button>
 <div class="home-grid">
-    <div class="home-type">
+    <div class="home-type title">
         <h2>
-            <span>CAMBERWELL COLLEGE OF ARTS</span>
-            <span>BA GRAPHIC DESIGN 2018</span>
-            <span>SUMMER SHOW</span>
+            <span>Camberwell College of Arts</span>
+            <span>BA Graphic Design</span>
+            <span>Summer Show</span>
         </h2>
         <h2>
-            <span>16—23 JUNE</span>
-            <span>45-65 PECKHAM ROAD</span>
-            <span>LONDON SE5 8UF</span>
+            <span>16—23 June</span>
+            <span>45—65 Peckham Road</span>
+            <span>London SE5 8UF</span>
         </h2>
     </div>
     <div class="home-livestream">
-        <iframe src="http://player.twitch.tv/?channel=camberwellgraphicdesign&muted=true" height="100%" width="100%" frameborder="0" scrolling="no"
+        <div class="stream-container offline">
+            <iframe src="http://player.twitch.tv/?channel=camberwellgraphicdesign&muted=true&controls=false"frameborder="0" scrolling="no"
             allowfullscreen="false" style="pointer-events: none;">
+        </div>
         </iframe>
-        <span class="live-indicator">Live</span>
+        </div>
+        <span class="live-indicator">Offline</span>
     </div>
 
     {% include home-image.html rows=2 %}
@@ -46,6 +49,8 @@ layout: base
     {% include home-image.html %}
     {% include home-image.html %}
     {% include home-image.html rows='2' %}
+    {% include home-image.html rows='2' %}
+    {% include home-image.html %}
     {% include home-image.html %}
     {% include home-image.html %}
     {% include home-image.html %}

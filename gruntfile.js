@@ -26,7 +26,7 @@ module.exports = function (grunt) {
                     sizes: [
                     {
                         name: 'large',
-                        width: 1000
+                        width: 700
                     }]
                 },
                 files: [{
