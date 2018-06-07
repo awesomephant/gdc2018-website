@@ -202,7 +202,7 @@ button:hover{
     grid-row-end: span 3;
     overflow: hidden;
     @include bp(m){
-        grid-row-end: span 4;
+//        grid-row-end: span 4;
     }
     position: relative;
     z-index: 100;
@@ -226,7 +226,7 @@ button:hover{
 }
 
 .person {
-    font-size: calc(1rem + .8vw);
+    font-size: calc(.9rem + .45vw + .5vh);
     text-decoration: none;
     font-weight: 100;
     color: $gray;
