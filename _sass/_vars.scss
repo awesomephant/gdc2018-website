@@ -19,7 +19,7 @@ $transition-duration: 500ms;
 
 @mixin bp($point) {
     @if $point == l {
-      @media (min-width: 65rem) { @content; }
+      @media (min-width: 75rem) { @content; }
     }
     @else if $point == m {
       @media (min-width: 50rem) { @content; }

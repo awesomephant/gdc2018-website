@@ -59,10 +59,10 @@ const handleTwitch = function (){
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
             console.log('Stream is online')
-            streamEl.classList.remove('offline')
             indicatorEl.innerHTML = 'Online'
         } else {
             console.log('Stream is offline')
+            //streamEl.classList.add('offline')
         }
     }
 }

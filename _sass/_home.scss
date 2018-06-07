@@ -56,7 +56,10 @@
         object-fit: cover;
         min-width: 500px;
         @include bp(m){
-            min-width: 1300px;
+            min-width: 1400px;
+        }
+        @include bp(l){
+            min-width: 2000px;
         }
     }
 }
