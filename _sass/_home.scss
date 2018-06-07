@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2, 50%);
     @include bp(m){
         grid-template-columns: repeat(3, 33.33333vw);
-        grid-template-rows: repeat(8, calc(13rem + 10vh + 3vw));
+        grid-template-rows: repeat(8, calc(13rem + 12vh + 3vw));
     }
     img, video {
         max-width: 150%;
