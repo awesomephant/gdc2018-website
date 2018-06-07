@@ -18,10 +18,7 @@ body {
     background: $gray;
     font-family: $america;
     @include blueCursor;
-    
 }
-
 a {
     @include blueCursor;
-
 }
