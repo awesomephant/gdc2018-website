@@ -225,6 +225,6 @@ button:hover{
     color: black;
     display: block;
     &:hover, &:focus {
-        opacity: .5;
+        color: $blue;
     }
 }
