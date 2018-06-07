@@ -31,6 +31,7 @@
 
 .stream-container {
     height: 100%;
+    min-height: 30vh;
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
@@ -52,9 +53,11 @@
         width: 100%;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         transform: scale(1.1);
         object-fit: cover;
-        min-width: 500px;
+        min-width: 590px;
         @include bp(m){
             min-width: 1400px;
         }
