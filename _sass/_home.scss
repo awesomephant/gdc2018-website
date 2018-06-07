@@ -110,6 +110,7 @@
     max-height: none;
     grid-column-start: auto;
     @include bp(m){
+        min-height: calc(13rem + 12vh + 3vw)
     }
   img {
       display: block;
