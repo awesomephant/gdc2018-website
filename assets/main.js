@@ -51,26 +51,7 @@ const shuffleImages = function () {
         }
     }
 }
-var httpRequest;
 
-const handleTwitch = function (){
-    let streamEl = document.querySelector('.stream-container');
-    let indicatorEl = document.querySelector('.live-indicator');
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        if (httpRequest.status === 200) {
-            console.log('Stream is online')
-            streamEl.classList.remove('offline')
-            indicatorEl.innerHTML = 'Online'
-        } else {
-            console.log('Stream is offline')
-        }
-    }
-}
-
-const checkIfStreamIsOnline = function () {
-    // If this request is succesful, we're online (we don't even need to look at the response)
-    makeRequest('https://api.twitch.tv/helix/streams?user_id=228850719', 'tofinjw4d6aeeg7yzb5vd8qv96b4xh', handleTwitch)
-}
 
 // Source: https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started
 function makeRequest(url, id, cb) {
@@ -85,5 +66,4 @@ function makeRequest(url, id, cb) {
     httpRequest.responseType = 'json'
     httpRequest.send();
 }
-checkIfStreamIsOnline();
 shuffleImages();
