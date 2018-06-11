@@ -164,6 +164,60 @@
     }
 }
 
+.home-card {
+    padding: 1rem;
+    background: $gray;
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: span 3;
+    @include bp(m){
+        grid-column-end: span 1;
+    }
+    span {
+        display: block;
+    }
+    h2 {
+        font-size: calc(1.4rem + .5vw);
+        margin-bottom: 1.5rem;
+    }
+}
+
+.home-credit {
+    padding: 1rem;
+    background: $gray;
+    color: black;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    @include bp(m){
+        grid-column-end: span 1;
+    }
+    span {
+        display: block;
+    }
+    h2 {
+        font-size: calc(1.4rem + .5vw);
+        margin-bottom: 1.5rem;
+    }
+}
+
+.home-info {
+    padding: 1rem;
+    background: $gray;
+    color: black;
+    grid-column-start: 3;
+    grid-column-end: span 3;
+    @include bp(m){
+        grid-column-end: span 1;
+    }
+    span {
+        display: block;
+    }
+    h2 {
+        font-size: calc(1.4rem + .5vw);
+        margin-bottom: 1.5rem;
+    }
+}
+
 
 .togglePeople{
     position: fixed;
