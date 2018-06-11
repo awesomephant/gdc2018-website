@@ -146,7 +146,8 @@
 }
 
 .home-type {
-    padding: .5rem;
+    padding: 1rem;
+    margin-top: -1.5%;
     background: $gray;
     color: black;
     grid-column-start: 1;
@@ -158,9 +159,8 @@
         display: block;
     }
     h2 {
-        font-size: calc(1.5rem + .5vw);
+        font-size: calc(1.4rem + .5vw);
         margin-bottom: 1.5rem;
-        margin-left: 1rem;
     }
 }
 
@@ -212,12 +212,11 @@ button:hover{
     background: $gray;
     columns: 2;
     list-style: none;
-    padding: 1rem;
     transition: 500ms;
 }
 
 .people-list-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 1;
     font-size: 1.4rem;
     color: black;
@@ -226,7 +225,7 @@ button:hover{
 }
 
 .person {
-    font-size: calc(.9rem + .45vw + .5vh);
+    font-size: calc(0.95rem + .5vw + .6vh);
     text-decoration: none;
     font-weight: 100;
     color: $gray;
