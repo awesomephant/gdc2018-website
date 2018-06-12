@@ -1,28 +1,27 @@
 .home-grid {
     display: grid;
-    grid-template-rows: repeat(8, minmax(20vh, auto));
+    grid-template-rows: repeat(16, minmax(20vh, auto));
     grid-template-columns: repeat(2, 50%);
-    @include bp(m){
+    @include bp(m) {
         grid-template-columns: repeat(3, 33.33333vw);
         grid-template-rows: repeat(8, calc(13rem + 12vh + 3vw));
     }
-    img, video {
-        max-width: 150%;
-    //    max-height: 100vh;
+    img,
+    video {
+        max-width: 150%; //    max-height: 100vh;
         display: block;
     }
 }
 
 .home-livestream {
-    overflow: hidden;
-    //margin-left: -40%;
+    overflow: hidden; //margin-left: -40%;
     background: $gray;
     grid-column-start: 1;
     grid-column-end: span 2;
     min-height: 30vh;
     position: relative;
     z-index: -100;
-    @include bp(m){
+    @include bp(m) {
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 1;
@@ -31,8 +30,7 @@
 }
 
 .stream-container {
-    height: 100%;
-    //min-height: 30vh;
+    height: 100%; //min-height: 30vh;
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
@@ -59,10 +57,10 @@
         transform: scale(1.1);
         object-fit: cover;
         min-width: 590px;
-        @include bp(m){
+        @include bp(m) {
             min-width: 1400px;
         }
-        @include bp(l){
+        @include bp(l) {
             min-width: 2000px;
         }
     }
@@ -89,19 +87,35 @@
         margin-right: .5rem;
         animation: pulsate 1s infinite alternate both;
     }
-    .offline + &:before {
+    .offline+&:before {
         display: none;
     }
 }
 
 .home-image {
+    grid-column-end: 1;
+    grid-column-start: 1;
+    &.column-end-2 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        @include bp(m) {
+            grid-column-start: auto;
+            grid-column-end: span 1;
+        }
+    }
     &.rows-2 {
         grid-column-end: span 2;
+        grid-column-start: 1;
         grid-row-end: span 1;
-        @include bp(m){
+        @include bp(m) {
+            grid-column-start: auto;
             grid-column-end: span 1;
             grid-row-end: span 2;
         }
+    }
+    @include bp(m) {
+        grid-column-start: auto;
+        grid-column-end: span 1;
     }
     overflow: hidden;
     background-size: cover;
@@ -109,14 +123,13 @@
     position: relative;
     min-height: calc(13rem + 5vh);
     max-height: none;
-    grid-column-start: auto;
-    @include bp(m){
+    @include bp(m) {
         min-height: calc(13rem + 12vh + 3vw)
     }
-  img {
-      display: block;
-      object-fit: cover;
-  }
+    img {
+        display: block;
+        object-fit: cover;
+    }
 }
 
 .credit {
@@ -152,7 +165,7 @@
     color: black;
     grid-column-start: 1;
     grid-column-end: span 3;
-    @include bp(m){
+    @include bp(m) {
         grid-column-end: span 1;
     }
     span {
@@ -170,7 +183,7 @@
     color: black;
     grid-column-start: 2;
     grid-column-end: span 3;
-    @include bp(m){
+    @include bp(m) {
         grid-column-end: span 1;
     }
     span {
@@ -188,7 +201,7 @@
     color: black;
     grid-column-start: 1;
     grid-column-end: span 3;
-    @include bp(m){
+    @include bp(m) {
         grid-column-end: span 1;
     }
     span {
@@ -206,7 +219,19 @@
     color: black;
     grid-column-start: 3;
     grid-column-end: span 3;
-    @include bp(m){
+    &.pv {
+        grid-column-start: 2;
+        @include bp(m) {
+            grid-column-start: auto;
+        }
+    }
+    &.location {
+        grid-column-start: 2;
+        @include bp(m) {
+            grid-column-start: auto;
+        }
+    }
+    @include bp(m) {
         grid-column-end: span 1;
     }
     span {
@@ -218,8 +243,7 @@
     }
 }
 
-
-.togglePeople{
+.togglePeople {
     position: fixed;
     z-index: 150;
     margin-top: 5px;
@@ -244,11 +268,10 @@
     }
     .arrow {
         fill: white;
-        
     }
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
@@ -256,14 +279,14 @@ button:hover{
     grid-column-end: span 2;
     grid-row-end: span 3;
     overflow: hidden;
-    @include bp(m){
-//        grid-row-end: span 4;
+    @include bp(m) {
+        //        grid-row-end: span 4;
     }
     position: relative;
     z-index: 100;
 }
 
-.people-list{
+.people-list {
     background: $gray;
     columns: 2;
     list-style: none;
@@ -286,7 +309,14 @@ button:hover{
     color: $gray;
     color: black;
     display: block;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         color: $blue;
+    }
+}
+
+[hideonbigscreen=true]{
+    @include bp(m){
+        display: none;
     }
 }

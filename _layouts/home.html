@@ -34,7 +34,8 @@ layout: base
     </div>
 
     {% include home-image.html rows=2 %}
-    <div class="home-card title">
+    {% include home-image.html rows=1 %}
+    <div class="home-info title pv">
         <h2>
             <span>Private View</span>
         </h2>
@@ -43,7 +44,7 @@ layout: base
             <span>6—9pm</span>
         </h2>
     </div>
-    {% include home-image.html %}
+    {% include home-image.html rows=2 hideOnBigScreen=true %}
     <div class="home-type home-people">
         <nav class="people-list">
 
@@ -55,11 +56,10 @@ layout: base
         </nav>
     </div>
     {% include home-image.html %}
-    {% include home-image.html %}
-    {% include home-image.html %}
+    {% include home-image.html c_end=2%}
     {% include home-image.html rows='2' %}
     {% include home-image.html %}
-    <div class="home-info title">
+    <div class="home-info title location">
         <h2>
             <span>18—23 June</span>
         </h2>
@@ -70,6 +70,7 @@ layout: base
         </h2>
     </div>
     {% include home-image.html %}
+    {% include home-image.html rows='2' %}
     {% include home-image.html rows='2' %}
     <div class="home-credit title">
         <h2>
