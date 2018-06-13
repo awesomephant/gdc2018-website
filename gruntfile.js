@@ -15,7 +15,18 @@ module.exports = function (grunt) {
                 },
                 src: '_site/',
                 dest: '/',
-            }
+            },
+            code: {
+                auth: {
+                    host: "192.186.222.66",
+                    port: 21,
+                    authPath: 'credentials.json',
+                    authKey: 'production'
+                },
+                src: '_site/',
+                exclusions: '_site/assets/images',
+                dest: '/',
+            },
         },
         responsive_images: {
             myTask: {
@@ -58,6 +69,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-exec');
     //    grunt.registerTask('deploy', ['run', 'ftp-deploy']);
     grunt.registerTask('minify', ['responsive_images', 'imagemin']);
-    grunt.registerTask('deploy', ['exec', 'minify', 'ftp-deploy']);
+    grunt.registerTask('deploy', ['exec', 'minify', 'ftp-deploy:production']);
+    grunt.registerTask('deploy-code', ['exec', 'ftp-deploy:code']);
 
 };
