@@ -11,6 +11,10 @@
         max-width: 150%; //    max-height: 100vh;
         display: block;
     }
+    div {
+        border-right: .5px solid $black;
+        border-bottom: .5px solid $black;
+    }
 }
 
 .home-livestream {
@@ -142,6 +146,7 @@
     font-size: .9rem;
     transition: $transition-duration;
     position: absolute;
+    letter-spacing: .02em;
     transform: translateY(10px);
     .home-image:hover & {
         transform: translateY(0);
@@ -158,6 +163,7 @@
 .title {
     //Below: Bad typography
     text-transform: uppercase;
+    letter-spacing: .02em;
 }
 
 .home-type {
@@ -296,8 +302,7 @@ button:hover {
 }
 
 .people-list-header {
-    margin-bottom: 1rem;
-    font-size: 1;
+    margin-bottom: 0;
     font-size: 1.4rem;
     color: black;
     column-span: all;
@@ -320,5 +325,11 @@ button:hover {
 [hideonbigscreen=true]{
     @include bp(m){
         display: none;
+    }
+}
+[hideonsmallscreen=true]{
+    display: none;
+    @include bp(m){
+        display: block;
     }
 }
