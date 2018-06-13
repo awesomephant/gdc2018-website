@@ -24,13 +24,13 @@ layout: base
         </h2>
     </div>
     <div class="home-livestream">
-        <div class="stream-container">
+        <div class="stream-container offline">
             <iframe src="http://player.twitch.tv/?channel=camberwellgraphicdesign&muted=true&controls=false"frameborder="0" scrolling="no"
             allowfullscreen="false" style="pointer-events: none;">
         </div>
         </iframe>
         </div>
-        <span class="live-indicator">Online</span>
+        <span class="live-indicator">Offline</span>
     </div>
 
     {% include home-image.html rows=2 %}
@@ -74,4 +74,5 @@ layout: base
     </div>
     {% include home-image.html %}
     {% include home-image.html rows='2' %}  
+    {% include home-image.html hideOnSmallScreen=true %}
 </div>
