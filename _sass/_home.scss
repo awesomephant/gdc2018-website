@@ -18,7 +18,7 @@
 }
 
 .home-livestream {
-    overflow: hidden; //margin-left: -40%;
+    overflow: hidden;
     background: $gray;
     grid-column-start: 1;
     grid-column-end: span 2;
@@ -38,7 +38,7 @@
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-    margin-left: -35%;
+    //margin-left: -35%;
     &.offline {
         position: absolute;
         top: 0;
