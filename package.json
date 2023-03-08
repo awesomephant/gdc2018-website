@@ -1,14 +1,29 @@
 {
-    "name": "gdc2018-website",
-    "description": "GDC Show Website 2018",
-    "authors": "Max Kohler, Ben Browning",
-    "version": "1.0.0",
-    "main": "pathToMain",
-    "dependencies": {
-        "grunt": "*",
-        "grunt-ftp-deploy": "*",
-        "grunt-contrib-imagemin": "*",
-        "grunt-exec": "*",
-        "grunt-responsive-images": "*"
-    }
+  "name": "gdc2018-website",
+  "description": "GDC Show Website 2018",
+  "authors": "Max Kohler, Ben Browning",
+  "version": "2.0.0",
+  "main": ".",
+  "scripts": {
+    "build:webpack": "webpack --mode production --optimization-minimize",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build:sass": "sass ./css/main.scss ./_site/main.css --no-source-map --style=compressed",
+    "watch:webpack": "webpack --watch --mode development",
+    "watch:sass": "sass ./css/main.scss ./_site/main.css --watch",
+    "watch:eleventy": "npx @11ty/eleventy --serve --quiet",
+    "start": "cross-env NODE_ENV=dev run-p 'watch:*'",
+    "build": "cross-env NODE_ENV=production run-s 'build:*'"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "cross-env": "^7.0.3",
+    "csv-parse": "^5.1.0",
+    "liquidjs": "^10.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.52.3",
+    "text-balancer": "^1.0.5",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "packageManager": "yarn@3.4.1"
 }

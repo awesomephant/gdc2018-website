@@ -1,9 +1,15 @@
 _site
 .sass-cache
-.jekyll-metadata
 credentials.json
 package-lock.json
 node_modules/
 _tmp/
 *.ttf
 *.woff
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

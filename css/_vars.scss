@@ -1,0 +1,35 @@
+@mixin bp($point) {
+  @if $point == l {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  } @else if $point == m {
+    @media (min-width: 50rem) {
+      @content;
+    }
+  } @else if $point == s {
+    @media (min-width: 35rem) {
+      @content;
+    }
+  }
+}
+
+// @font-face {
+//   font-family: "GT America Light";
+//   src: url("../assets/GT-America-Extended-Regular.ttf") format("truetype"), url("../assets/GT-America-Extended-Regular.woff") format("woff");
+// }
+
+@keyframes pulsate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+$gray: #c9c9c9;
+$blue: #0408d9;
+$black: rgb(10, 10, 10);
+$america: "GT America Light", serif;
+$transition-duration: 500ms;

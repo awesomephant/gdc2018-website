@@ -1,0 +1,77 @@
+---
+layout: base
+---
+
+<button class="togglePeople">
+    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24">
+        <path class='box' d="M0 0h24v24H0z" fill="none" />
+        <path class='arrow' d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+    </svg>
+</button>
+<div class="home-grid">
+    <div class="home-type title">
+        <h2>
+            <span>Camberwell</span>
+            <span>College of Arts</span>
+        </h2>
+        <h2>
+            <span>BA Graphic Design</span>
+            <span>Degree Show</span>
+            <span>2018</span>
+        </h2>
+        <h2>
+            <span>18—23 June</span>
+        </h2>
+    </div>
+    <div class="home-livestream">
+        <div class="stream-container offline">
+            <iframe data-src="https://player.twitch.tv/?parent=localhost&parent=camberwell2018.maxkohler.com&channel=camberwellgraphicdesign&muted=true&controls=false" frameborder="0" scrolling="no" allowfullscreen="false" style="pointer-events: none;">
+        </div>
+        </iframe>
+    </div>
+    <span class="live-indicator">Offline</span>
+</div>
+
+{% include "home-image" with {rows:2} %}
+{% include "home-image" with {rows:1} %}
+<div class="home-info title pv">
+    <h2>
+        <span>Private View</span>
+    </h2>
+    <h2>
+        <span>Monday 18 June</span>
+        <span>6—9pm</span>
+    </h2>
+</div>
+{% include "home-image" with {rows:2, hideOnBigScreen:true} %}
+<div class="home-type home-people">
+    <nav class="people-list">
+
+        <h2 class='people-list-header'>Graduates</h2>
+        {% for person in names %}
+        <a class="person" href="{{person.website}}" target="_blank">{{person.first_name}} {{person.last_name}}</a>
+        {% endfor %}
+        </ul>
+    </nav>
+</div>
+{% include "home-image" %}
+{% include "home-image" with {c_end:2}%}
+{% include "home-image" with {rows:2} %}
+{% include "home-image" %}
+<div class="home-info title location">
+    <h2>
+        <span>18—23 June</span>
+    </h2>
+    <h2>
+        <span>45—65 Peckham Road</span>
+        <span>London</span>
+        <span>SE5 8UF</span>
+    </h2>
+    <a href="https://www.instagram.com/camberwellgraphicdesign/">Instagram</a>
+    <a href="https://www.facebook.com/events/2180116688885178/">Facebook</a>
+
+</div>
+{% include "home-image" %}
+{% include "home-image" with {rows:'2'} %}
+{% include "home-image" with {hideOnSmallScreen:true} %}
+</div>
