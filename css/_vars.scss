@@ -14,10 +14,10 @@
   }
 }
 
-// @font-face {
-//   font-family: "GT America Light";
-//   src: url("../assets/GT-America-Extended-Regular.ttf") format("truetype"), url("../assets/GT-America-Extended-Regular.woff") format("woff");
-// }
+@font-face {
+  font-family: "GT America Light";
+  src: url("../assets/gt-america-extended-regular.woff") format("woff"), url("../assets/gt-america-extended-regular.woff2") format("woff2");
+}
 
 @keyframes pulsate {
   from {
