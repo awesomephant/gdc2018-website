@@ -1140,10 +1140,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csv-parse@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "csv-parse@npm:5.5.0"
-  checksum: a9cc73a332debdabe9658c532e7668c626c06616113b650fb2e063f3a1451d45a48080c1942a680e8ddeaf1665efef49f126e655c54c19e025d70cccc002ff4d
+"csv-parse@npm:^5.5.2":
+  version: 5.5.2
+  resolution: "csv-parse@npm:5.5.2"
+  checksum: de2eb0c29b049783ef101b7eb843456200dc9a4fc9f4b400473bb0521b41aadb77af560cf4edc49bac65cc457b32596519860120181b26ec3b372109ddf8e8ea
   languageName: node
   linkType: hard
 
@@ -1710,7 +1710,7 @@ __metadata:
   dependencies:
     "@11ty/eleventy": ^2.0.1
     cross-env: ^7.0.3
-    csv-parse: ^5.5.0
+    csv-parse: ^5.5.2
     npm-run-all: ^4.1.5
     sass: ^1.69.0
     webpack: ^5.88.2
